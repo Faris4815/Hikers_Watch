@@ -12,11 +12,11 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    TextView latitude_TW;
-    TextView longitude_TW;
-    TextView accuracy_TW;
-    TextView altitude_TW;
-    TextView address_TW;
+    TextView latitude;
+    TextView longitude;
+    TextView accuracy;
+    TextView altitude;
+    TextView address;
 
 
     @Override
@@ -24,12 +24,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        latitude_TW = findViewById(R.id.latitude_ID);
-        longitude_TW = findViewById(R.id.longitude_ID);
-        accuracy_TW = findViewById(R.id.accuracy_ID);
-        altitude_TW = findViewById(R.id.altitude_ID);
-        address_TW = findViewById(R.id.address_ID);
+        latitude = findViewById(R.id.latitude_ID);
+        longitude = findViewById(R.id.longitude_ID);
+        accuracy = findViewById(R.id.accuracy_ID);
+        altitude = findViewById(R.id.altitude_ID);
+        address = findViewById(R.id.address_ID);
 
+        //Es gibt viel bessere Wege die Permissions anzufragen aber ich folge hier mal den sehr simplen Weg der im Tutorial gezeigt wurde um voran zu kommen.
+        //Im Internet werden oft ActivityResultLauncher benutzt. Siehe Artikel in Chrome Lesezeichen -> Android -> CheckOut
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
                 && ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             // You can use the API that requires the permission.
