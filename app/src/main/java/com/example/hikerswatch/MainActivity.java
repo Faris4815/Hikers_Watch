@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
                             break;
                     }
                 } else {
-                    ActivityCompat.requestPermissions(this, permissionsToBeRequested.toArray(new String[0]), 0);
+                    ActivityCompat.requestPermissions(this, new String[] {permissionsToBeRequested.get(permissionIndex)}, 0);
                 }
 
             }
