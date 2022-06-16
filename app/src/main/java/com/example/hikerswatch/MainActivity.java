@@ -44,7 +44,6 @@ public class MainActivity extends Activity {
             // permission for a specific feature to behave as expected. In this UI,
             // include a "cancel" or "no thanks" button that allows the user to
             // continue using your app without granting the permission.
-            //TODO: showInContextUI(...);
             showDialogue("COARSE-LOCATION is needed", "The App needs your approximate location to work", Manifest.permission.ACCESS_COARSE_LOCATION);
         } else {
             Log.i("MyInfo","mExec3");
